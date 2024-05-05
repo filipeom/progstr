@@ -7,10 +7,10 @@ let () =
   let fill = Sys.argv.(2).[0] in
   let empty = Sys.argv.(3).[0] in
   let percent = int_of_string Sys.argv.(4) in
-  let idx_empty = len * percent / 100 in
-  for _ = 0 to (idx_empty - 1) do
+  let i = len * percent / 100 in
+  for _ = 0 to i - 1 do
     print_char fill
   done;
-  for _ = idx_empty to (len - 1) do
+  for _ = i to len - 1 do
     print_char empty
-  done;
+  done
