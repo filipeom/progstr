@@ -7,6 +7,9 @@ let () =
   let fill = Sys.argv.(2).[0] in
   let empty = Sys.argv.(3).[0] in
   let percent = int_of_string Sys.argv.(4) in
+  let percent =
+    if percent < 0 then 0 else if percent > 100 then 100 else percent
+  in
   let i = len * percent / 100 in
   for _ = 0 to i - 1 do
     print_char fill
