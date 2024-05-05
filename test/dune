@@ -1,3 +1,3 @@
 (cram
  (deps
-  %{bin:progstr}))
+  ../src/progstr.exe))
